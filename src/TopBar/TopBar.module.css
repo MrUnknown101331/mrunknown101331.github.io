@@ -22,18 +22,23 @@
     transition: all 0.3s ease;
 }
 
-.head a{
+.head a {
     padding: 40px 1.5rem;
 }
 
-.shortHead a{
+.shortHead a {
     padding: 20px 1.5rem;
 }
 
-.shortHead a:hover, .shortHead a:focus {
+.head a:hover {
+    transform: translateY(-5px);
+    text-shadow: 1px 5px 3px #000000;
+}
+
+.shortHead a:hover {
     background-color: #346678;
 }
 
-.shortHead .selected{
+.shortHead .selected {
     background-color: #1e4551;
 }

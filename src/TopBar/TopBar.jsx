@@ -16,17 +16,17 @@ function TopBar() {
             const contactSection = document.getElementById('contact');
 
             // Set active section based on scroll position
-            if (contactSection && offset >= contactSection.offsetTop - 50) {
+            if (contactSection && offset >= contactSection.offsetTop - 150) {
                 setActiveSection('#contact');
-            } else if (projectsSection && offset >= projectsSection.offsetTop - 50) {
+            } else if (projectsSection && offset >= projectsSection.offsetTop - 150) {
                 setActiveSection('#projects');
-            } else if (skillsSection && offset >= skillsSection.offsetTop - 50) {
+            } else if (skillsSection && offset >= skillsSection.offsetTop - 150) {
                 setActiveSection('#skills');
-            } else if (servicesSection && offset >= servicesSection.offsetTop - 50) {
+            } else if (servicesSection && offset >= servicesSection.offsetTop - 150) {
                 setActiveSection('#services');
-            } else if (aboutSection && offset >= aboutSection.offsetTop - 50) {
+            } else if (aboutSection && offset >= aboutSection.offsetTop - 150) {
                 setActiveSection('#about');
-            } else if (homeSection && offset >= homeSection.offsetTop - 50) {
+            } else if (homeSection && offset >= homeSection.offsetTop - 150) {
                 setActiveSection('#home');
             }
 
@@ -43,12 +43,23 @@ function TopBar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleSmoothScroll = (e, sectionId) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.scrollIntoView({behavior: 'smooth'});
+        }
+    };
+
 
     return (
         <nav className={scrolled ? styles.shortHead : styles.head}>
-            <a href="#home" className={activeSection === '#home' ? styles.selected : ""}>Home</a>
-            <a href="#about" className={activeSection === '#about' ? styles.selected : ""}>About</a>
-            <a href="#services" className={activeSection === '#services' ? styles.selected : ""}>Services</a>
+            <a href="#home" className={activeSection === '#home' ? styles.selected : ""}
+               onClick={(e) => handleSmoothScroll(e, 'home')}>Home</a>
+            <a href="#about" className={activeSection === '#about' ? styles.selected : ""}
+               onClick={(e) => handleSmoothScroll(e, 'about')}>About</a>
+            <a href="#services" className={activeSection === '#services' ? styles.selected : ""}
+               onClick={(e) => handleSmoothScroll(e, 'services')}>Services</a>
             <a href="#">Skills</a>
             <a href="#">Projects</a>
             <a href="#">Contact</a>
