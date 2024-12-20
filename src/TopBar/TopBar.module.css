@@ -1,0 +1,39 @@
+.head, .shortHead {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.shortHead {
+    background-color: #1e3551;
+}
+
+.head a, .shortHead a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.head a{
+    padding: 40px 1.5rem;
+}
+
+.shortHead a{
+    padding: 20px 1.5rem;
+}
+
+.shortHead a:hover, .shortHead a:focus {
+    background-color: #346678;
+}
+
+.shortHead .selected{
+    background-color: #1e4551;
+}
