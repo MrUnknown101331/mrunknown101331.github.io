@@ -1,14 +1,21 @@
-import HomeBar from "./HomeBar/HomeBar.jsx";
 import About from "./About/About.jsx";
 import Services from "./Services/Services.jsx";
+import TopBar from "./TopBar/TopBar.jsx";
+import Home from "./Home/home.jsx";
+import processData from "./utils/processData.js";
+import data from "./assets/data.json";
 
 function App() {
+    let processedData;
+    processedData = processData(data);
+
     return (
-        <>
-            <HomeBar/>
-            <About/>
-            <Services/>
-        </>
+        <div className="App">
+            <TopBar/>
+            <Home data={processedData}/>
+            <About data={processedData}/>
+            <Services data={processedData}/>
+        </div>
     )
 
 }

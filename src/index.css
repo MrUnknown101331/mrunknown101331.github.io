@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
+}
+
+.App {
+    background-image: url("./assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
 }

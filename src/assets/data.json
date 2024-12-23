@@ -1,10 +1,22 @@
 {
   "name": "Faizan Ahmed",
+  "cgpa": "9.44",
+  "year": "Third",
   "roles": [
     "Full Stack Developer",
     "MERN Developer",
     "Android Developer",
     "Problem Solver"
   ],
-  "linkedin": "https://www.linkedin.com/in/faizan-ahmed-a947791b0"
+  "punctuation_roles": [
+    "a Problem Solver",
+    "a Full Stack Developer",
+    "a MERN Developer",
+    "an Android Developer"
+  ],
+  "about": "As a dedicated B.Tech student, I am seeking an entry-level opportunity where I can apply my skills & enhance learning in the field of work. With proficiency in languages such as C, Java, Kotlin, and Python, I am committed to leveraging my knowledge to contribute effectively to real-world projects.",
+  "why_me": "I bring a strong foundation in problem-solving and communication, coupled with hands-on experience in developing innovative web and mobile applications. My ability to learn quickly and adapt to new tools makes me a valuable team player ready to tackle complex challenges.",
+  "education": "NIST Institute of Science and Technology\nBachelor of Technology (B.Tech)\nCurrent CGPA: ${cgpa}\nCurrently in  ${year} Year",
+  "linkedin": "https://www.linkedin.com/in/faizan-ahmed-a947791b0",
+  "cv": "https://drive.google.com/file/d/1D1uB5Z2ncuxGohRBryfi8QqyT9N6YThd/view?usp=drive_link"
 }
