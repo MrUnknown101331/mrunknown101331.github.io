@@ -23,9 +23,10 @@ function processData(data) {
     processedData.roles.forEach(role => {
         punctuation_roles.push(addPunctuation(role))
     })
-    console.log(processedData)
 
     processedData['punctuation_roles'] = punctuation_roles;
+    processedData['max_len'] = Math.max(...punctuation_roles.map(x => x.length))
+    console.log(processedData)
     return processedData;
 }
 

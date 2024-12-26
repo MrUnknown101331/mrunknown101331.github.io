@@ -13,13 +13,12 @@ function About(props) {
                         <img src={profile} alt="profile" className={styles.image}/>
                     </div>
                     <div className={`${styles.right} ${props.isSmall ? styles.bigRight : ''}`}>
-                        <p className={styles.title}>I&#39;m {props.data.name} and I&#39;m &nbsp;
+                        <p className={styles.title}>I&#39;m {props.data.name} and I&#39;m&nbsp;
                             <ReactTyped
                                 strings={props.data.punctuation_roles}
                                 typeSpeed={60}
                                 backSpeed={50}
                                 loop
-                                className={styles.roll}
                             /></p>
                         <p className={styles.description}>{props.data.about}</p>
                         <p className={styles.title}>Why Work With Me</p>

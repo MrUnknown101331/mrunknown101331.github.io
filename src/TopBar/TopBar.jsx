@@ -1,7 +1,8 @@
 import styles from "./TopBar.module.css"
 import {useEffect, useState} from "react";
+import PropTypes from "prop-types";
 
-function TopBar() {
+function TopBar(props) {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('#home');
 
@@ -53,7 +54,7 @@ function TopBar() {
 
 
     return (
-        <nav className={scrolled ? styles.shortHead : styles.head}>
+        <nav className={`${scrolled ? styles.shortHead : styles.head} ${props.isSmall ? styles.smallHead : ""}`}>
             <a href="#home" className={activeSection === '#home' ? styles.selected : ""}
                onClick={(e) => handleSmoothScroll(e, 'home')}>Home</a>
             <a href="#about" className={activeSection === '#about' ? styles.selected : ""}
@@ -65,6 +66,10 @@ function TopBar() {
             <a href="#">Contact</a>
         </nav>
     )
+}
+
+TopBar.propTypes = {
+    isSmall: PropTypes.bool.isRequired,
 }
 
 export default TopBar

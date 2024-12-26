@@ -15,7 +15,7 @@ function App() {
 
     return (
         <div className="App">
-            <TopBar/>
+            <TopBar isSmall={isSmall}/>
             <Home data={processedData} isSmall={isSmall}/>
             <About data={processedData} isSmall={isSmall}/>
             <Services data={processedData}/>

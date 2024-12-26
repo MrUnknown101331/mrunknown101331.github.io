@@ -16,6 +16,10 @@
     margin: 0;
 }
 
+.smallLast .txt {
+    min-height: 4rem;
+}
+
 .first {
     font-size: 27px;
 }
