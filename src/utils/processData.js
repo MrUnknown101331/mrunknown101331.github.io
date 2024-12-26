@@ -4,7 +4,13 @@ function findData(data, sentence) {
             return data[key] || '';
         }))
     return sentence;
+}
 
+function addPunctuation(sentence) {
+    const vowel = 'AEIOUaeiou'
+    if (vowel.includes(sentence[0]))
+        return 'an ' + sentence;
+    return 'a ' + sentence;
 }
 
 function processData(data) {
@@ -12,6 +18,14 @@ function processData(data) {
     Object.entries(data).forEach(([key, value]) => {
         processedData[key] = findData(data, value);
     });
+
+    let punctuation_roles = []
+    processedData.roles.forEach(role => {
+        punctuation_roles.push(addPunctuation(role))
+    })
+    console.log(processedData)
+
+    processedData['punctuation_roles'] = punctuation_roles;
     return processedData;
 }
 

@@ -7,11 +7,11 @@
     gap: 10px;
     color: white;
     max-width: 1100px;
-    padding: 0 80px;
+    padding: 0 5.5%;
     margin: auto;
 }
 
-.first, .name, .txt, .roll {
+.first, .name, .txt {
     padding: 0;
     margin: 0;
 }
@@ -33,6 +33,14 @@
     font-weight: bold;
 }
 
+.smallName {
+    font-size: 50px;
+}
+
+.smallLast {
+    font-size: 27px;
+}
+
 .button {
     display: inline-block;
     background: #1e3551;
@@ -45,6 +53,11 @@
     border: 2px solid #1e3551;
     transition: all 0.3s ease;
     width: fit-content;
+}
+
+.smallButton {
+    font-size: 18px;
+    padding: 10px 20px;
 }
 
 .button:hover {
