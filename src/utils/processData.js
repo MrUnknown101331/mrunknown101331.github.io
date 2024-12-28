@@ -26,7 +26,6 @@ function processData(data) {
 
     processedData['punctuation_roles'] = punctuation_roles;
     processedData['max_len'] = Math.max(...punctuation_roles.map(x => x.length))
-    console.log(processedData)
     return processedData;
 }
 

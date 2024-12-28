@@ -16,7 +16,7 @@
     margin: 0;
 }
 
-.smallLast .txt {
+.txt {
     min-height: 4rem;
 }
 
@@ -37,14 +37,6 @@
     font-weight: bold;
 }
 
-.smallName {
-    font-size: 50px;
-}
-
-.smallLast {
-    font-size: 27px;
-}
-
 .button {
     display: inline-block;
     background: #1e3551;
@@ -59,11 +51,6 @@
     width: fit-content;
 }
 
-.smallButton {
-    font-size: 18px;
-    padding: 10px 20px;
-}
-
 .button:hover {
     background-color: #18273c;
     border-color: #18273c;
@@ -74,4 +61,20 @@
     background-color: #1e3551;
     border-color: #1e3551;
     transform: scale(0.9);
+}
+
+@media (max-width: 900px) {
+    .name {
+        font-size: 50px;
+    }
+
+    .last {
+        font-size: 27px;
+        min-height: 4rem;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
 }

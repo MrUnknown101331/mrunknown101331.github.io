@@ -15,10 +15,6 @@
     background-color: #1e3551;
 }
 
-.smallHead {
-    font-size: 12px;
-}
-
 .head a, .shortHead a {
     text-align: center;
     color: white;
@@ -30,16 +26,8 @@
     padding: 40px 1.5rem;
 }
 
-.head.smallHead a {
-    padding: 30px 0.7rem;
-}
-
 .shortHead a {
     padding: 20px 1.5rem;
-}
-
-.shortHead.smallHead a {
-    padding: 20px 0.7rem;
 }
 
 .head a:hover {
@@ -53,4 +41,18 @@
 
 .shortHead .selected {
     background-color: #1e4551;
+}
+
+@media (max-width: 900px) {
+    .head, .shortHead {
+        font-size: 12px;
+    }
+
+    .head a {
+        padding: 30px 0.7rem;
+    }
+
+    .shortHead a {
+        padding: 20px 0.7rem;
+    }
 }

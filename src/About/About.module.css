@@ -25,11 +25,6 @@
     justify-content: space-between;
 }
 
-.smallContain {
-    flex-direction: column;
-    justify-content: center;
-}
-
 .image {
     height: 400px;
 }
@@ -37,11 +32,6 @@
 .right {
     width: 55%;
     font-family: "Poppins", sans-serif;
-}
-
-.bigRight {
-    padding-right: 20px;
-    width: fit-content;
 }
 
 .title {
@@ -80,4 +70,16 @@
     background-color: #1e3551;
     border-color: #1e3551;
     transform: scale(0.9);
+}
+
+@media (max-width: 900px) {
+    .contain {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .right {
+        padding-right: 20px;
+        width: fit-content;
+    }
 }

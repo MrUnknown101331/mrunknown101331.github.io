@@ -8,11 +8,11 @@ function About(props) {
         <section id="about" className={styles.body}>
             <div className={styles.box}>
                 <h2 className={styles.head}>About Me</h2>
-                <div className={`${styles.contain} ${props.isSmall ? styles.smallContain : ''}`}>
-                    <div className={styles.left}>
+                <div className={styles.contain}>
+                    <div>
                         <img src={profile} alt="profile" className={styles.image}/>
                     </div>
-                    <div className={`${styles.right} ${props.isSmall ? styles.bigRight : ''}`}>
+                    <div className={styles.right}>
                         <p className={styles.title}>I&#39;m {props.data.name} and I&#39;m&nbsp;
                             <ReactTyped
                                 strings={props.data.punctuation_roles}
@@ -37,8 +37,7 @@ function About(props) {
 }
 
 About.propTypes = {
-    data: PropTypes.object.isRequired,
-    isSmall: PropTypes.bool.isRequired,
+    data: PropTypes.object.isRequired
 }
 
 export default About
