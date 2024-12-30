@@ -85,6 +85,38 @@
       "Google Firebase"
     ]
   },
+  "projects": [
+    {
+      "name": "Contact Manager",
+      "below": "with user authentication",
+      "desc": "A secure web application for user authentication and personal contact management. Users can register, log in, and manage their own contact lists, with data stored in a MongoDB database. Implemented the frontend using React and the backend with Node.js, Express, and JWT-based authentication."
+    },
+    {
+      "name": "NIST Patrika",
+      "below": "Front End only",
+      "desc": "Designed and developed the frontend of a web-based newsletter platform to showcase institutional news and articles. Built using React, with a focus on responsive design, intuitive navigation, and dynamic content presentation."
+    },
+    {
+      "name": "Personal CV Website",
+      "below": "Front End Development",
+      "desc": "Developed a dynamic and responsive personal CV website using React. All data is sourced from a JSON file, enabling effortless content management and updates. The site features intuitive navigation, smooth transitions, and a clean UI/UX design.Optimized for various devices and screen sizes to ensure a consistent user experience."
+    },
+    {
+      "name": "Flicker (Android App)",
+      "below": "IOT based LED light colour changing APP",
+      "desc": "Created an Android application using Jetpack Compose and Google Firebase to manage LED lighting systems. Hardware implementation utilizes an ESP32 microcontroller for color control, enabling real-time adjustments and dynamic lighting effects."
+    },
+    {
+      "name": "PokerPay (Android App)",
+      "below": "using Google Firebase",
+      "desc": "Developed a fully operational Android application to simulate the transaction of points between players during real poker matches. The app supports multiple games running in parallel seamlessly, ensuring smooth functionality and reliability. Built with Jetpack Compose and integrated with Google Firebase for real-time data synchronization."
+    },
+    {
+      "name": "Tic Tac Toe Game",
+      "below": "Front End Development",
+      "desc": "Built a Tic Tac Toe game using HTML for structure, CSS for styling, and JavaScript for game logic. Implemented an algorithm to strategically select the computer's moves based on the current board configuration. Features responsive design for optimal play on different screen sizes. Includes game state management and win/draw condition detection."
+    }
+  ],
   "about": "As a dedicated B.Tech student, I am seeking an entry-level opportunity where I can apply my skills & enhance learning in the field of work. With proficiency in languages such as C, Java, Kotlin, and Python, I am committed to leveraging my knowledge to contribute effectively to real-world projects.",
   "why_me": "I bring a strong foundation in problem-solving and communication, coupled with hands-on experience in developing innovative web and mobile applications. My ability to learn quickly and adapt to new tools makes me a valuable team player ready to tackle complex challenges.",
   "education": "NIST Institute of Science and Technology\nBachelor of Technology (B.Tech)\nCurrent CGPA: ${cgpa}\nCurrently in  ${year} Year",

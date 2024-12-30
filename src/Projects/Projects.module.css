@@ -1,0 +1,56 @@
+.body {
+    background: #000;
+    padding: 100px 0;
+}
+
+.box {
+    max-width: 1100px;
+    padding: 0 5.5%;
+    margin: auto;
+
+}
+
+.head {
+    font-size: 40px;
+    padding: 0 0 50px 0;
+    margin: 0;
+    text-align: center;
+    text-decoration: 2px dashed underline;
+    color: #fff;
+}
+
+.contain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+
+.carouselContainer {
+    margin-bottom: 40px; /* Add space below the cards for the dots */
+    position: relative;
+}
+
+.customDotList {
+    position: relative;
+    bottom: -20px; /* Move dots below the cards */
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.dotButton {
+    background-color: #bbb; /* Default dot color */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activeDotButton {
+    background-color: #333; /* Active dot color */
+}
