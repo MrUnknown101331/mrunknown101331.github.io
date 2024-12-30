@@ -11,18 +11,6 @@ function App() {
     let processedData;
     processedData = processData(data);
 
-    const getDeviceType = () => {
-        const userAgent = navigator.userAgent;
-        if (/Mobile|Android|iP(ad|hone|od)/i.test(userAgent)) {
-            return "mobile";
-        } else if (/Tablet|iPad/i.test(userAgent)) {
-            return "tablet";
-        }
-        return "desktop";
-    };
-
-    console.log(getDeviceType())
-
     return (
         <div className="App">
             <TopBar/>
@@ -30,7 +18,7 @@ function App() {
             <About data={processedData}/>
             <Services data={processedData}/>
             <Skills data={processedData}/>
-            <Projects data={processedData} deviceType={getDeviceType()}/>
+            <Projects data={processedData}/>
         </div>
     )
 

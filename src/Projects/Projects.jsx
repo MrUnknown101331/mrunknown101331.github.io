@@ -1,66 +1,75 @@
 import styles from './Projects.module.css';
 import PropTypes from "prop-types";
 import ProjectCard from "../ProjectCard/ProjectCard.jsx";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import {Pagination, A11y, Autoplay, EffectCoverflow} from 'swiper/modules';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 function Projects(props) {
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-            slidesToSlide: 3 // optional, default to 1.
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1 // optional, default to 1.
-        }
-    };
-
     return (
         <section id="projects" className={styles.body}>
             <div className={styles.box}>
                 <h2 className={styles.head}>My Projects</h2>
-                <Carousel
-                    swipeable={true}
-                    draggable={true}
-                    showDots={true}
-                    responsive={responsive}
-                    ssr={true} // means to render carousel on server-side.
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={5000}
-                    keyBoardControl={true}
-                    customTransition="all .5"
-                    transitionDuration={500}
-                    containerClass={styles.carouselContainer}
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
-                    deviceType={props.deviceType}
-                    dotListClass={styles.customDotList}
-                    itemClass="carousel-item-padding-40-px"
+                <Swiper
+                    className={styles.carouselContainer}
+                    modules={[Pagination, A11y, Autoplay, EffectCoverflow]}
+                    spaceBetween={30}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    effect={'coverflow'}
+                    loop={true}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    autoplay={{
+                        delay: 3000,  // Time interval between slides (in milliseconds, e.g., 3000 = 3 seconds)
+                        disableOnInteraction: false,  // Keep autoplay running after user interaction
+                    }}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                    }}
+                    pagination={{
+                        clickable: true,
+                        el: `.${styles.customDotList}`,
+                        bulletClass: styles.dotButton,
+                        bulletActiveClass: styles.activeDotButton,
+                    }}
                 >
                     {props.data.projects.map((project, index) => (
-                        <ProjectCard
-                            key={index}
-                            below={project.below}
-                            description={project.desc}
-                            name={project.name}
-                        />
+                        <SwiperSlide key={index} className={styles.swipeCard}>
+                            <ProjectCard
+                                below={project.below}
+                                description={project.desc}
+                                name={project.name}
+                            />
+                        </SwiperSlide>
                     ))}
-                </Carousel>
+                </Swiper>
+                <div className={styles.customDotList}></div>
             </div>
         </section>
     );
 }
 
 Projects.propTypes = {
-    deviceType: PropTypes.string.isRequired,
     data: PropTypes.object.isRequired
 };
 

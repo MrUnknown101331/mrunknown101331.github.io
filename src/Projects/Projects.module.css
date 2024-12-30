@@ -7,7 +7,6 @@
     max-width: 1100px;
     padding: 0 5.5%;
     margin: auto;
-
 }
 
 .head {
@@ -19,20 +18,21 @@
     color: #fff;
 }
 
-.contain {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
+.swipeCard {
+    display: flex; /* Flexbox container for slides */
+    align-items: stretch; /* Stretch slides to fill container height */
+    margin-bottom: 40px; /* Space below the cards for dots */
+    position: relative;
 }
 
-
 .carouselContainer {
-    margin-bottom: 40px; /* Add space below the cards for the dots */
+    display: flex; /* Flexbox container for slides */
+    align-items: stretch; /* Stretch slides to fill container height */
     position: relative;
 }
 
 .customDotList {
+    margin: auto;
     position: relative;
     bottom: -20px; /* Move dots below the cards */
     display: flex;
@@ -41,16 +41,19 @@
 }
 
 .dotButton {
-    background-color: #bbb; /* Default dot color */
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    border: none;
+    background-color: inherit;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 50%;
+    border: 2px solid #888c8d;
+    transition: all 0.3s ease;
 }
 
 .activeDotButton {
-    background-color: #333; /* Active dot color */
+    background: #18365a;
+    width: 35px;
+    border-radius: 14px;
 }

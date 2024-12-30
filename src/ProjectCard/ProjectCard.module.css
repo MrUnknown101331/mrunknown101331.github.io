@@ -1,18 +1,16 @@
 .card {
-    height: 100%;
-    margin: 0 10px;
-    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    padding: 50px 25px 0;
     box-sizing: border-box;
     background: linear-gradient(145deg, #333, #444);
     color: white;
     font-family: "Poppins", sans-serif;
     text-align: center;
-    cursor: pointer;
     border-radius: 16px;
     transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .card:hover {
@@ -33,7 +31,10 @@
 }
 
 .description {
-    font-size: 1rem;
+    height: 100%;
     margin: 0;
+    font-size: 1rem;
     color: #bbb;
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, black 75%, transparent);
 }

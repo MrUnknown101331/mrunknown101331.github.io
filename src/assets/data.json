@@ -102,13 +102,13 @@
       "desc": "Developed a dynamic and responsive personal CV website using React. All data is sourced from a JSON file, enabling effortless content management and updates. The site features intuitive navigation, smooth transitions, and a clean UI/UX design.Optimized for various devices and screen sizes to ensure a consistent user experience."
     },
     {
-      "name": "Flicker (Android App)",
-      "below": "IOT based LED light colour changing APP",
+      "name": "Flicker",
+      "below": "IOT based LED colour changing Android APP",
       "desc": "Created an Android application using Jetpack Compose and Google Firebase to manage LED lighting systems. Hardware implementation utilizes an ESP32 microcontroller for color control, enabling real-time adjustments and dynamic lighting effects."
     },
     {
-      "name": "PokerPay (Android App)",
-      "below": "using Google Firebase",
+      "name": "PokerPay",
+      "below": "Android App using Google Firebase",
       "desc": "Developed a fully operational Android application to simulate the transaction of points between players during real poker matches. The app supports multiple games running in parallel seamlessly, ensuring smooth functionality and reliability. Built with Jetpack Compose and integrated with Google Firebase for real-time data synchronization."
     },
     {
