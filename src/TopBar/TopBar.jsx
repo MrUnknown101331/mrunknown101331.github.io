@@ -54,13 +54,14 @@ function TopBar() {
 
     return (
         <nav className={scrolled ? styles.shortHead : styles.head}>
-            <a href="#home" className={activeSection === '#home' ? styles.selected : ""}
+            <a className={activeSection === '#home' ? styles.selected : ""}
                onClick={(e) => handleSmoothScroll(e, 'home')}>Home</a>
-            <a href="#about" className={activeSection === '#about' ? styles.selected : ""}
+            <a className={activeSection === '#about' ? styles.selected : ""}
                onClick={(e) => handleSmoothScroll(e, 'about')}>About</a>
-            <a href="#services" className={activeSection === '#services' ? styles.selected : ""}
+            <a className={activeSection === '#services' ? styles.selected : ""}
                onClick={(e) => handleSmoothScroll(e, 'services')}>Services</a>
-            <a href="#">Skills</a>
+            <a className={activeSection === '#skills' ? styles.selected : ""}
+               onClick={(e) => handleSmoothScroll(e, 'services')}>Services</a>
             <a href="#">Projects</a>
             <a href="#">Contact</a>
         </nav>

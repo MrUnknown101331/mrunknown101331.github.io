@@ -4,6 +4,7 @@ import TopBar from "./TopBar/TopBar.jsx";
 import Home from "./Home/home.jsx";
 import processData from "./utils/processData.js";
 import data from "./assets/data.json";
+import Skills from "./Skills/Skills.jsx";
 
 function App() {
     let processedData;
@@ -15,6 +16,7 @@ function App() {
             <Home data={processedData}/>
             <About data={processedData}/>
             <Services data={processedData}/>
+            <Skills data={processedData}/>
         </div>
     )
 
