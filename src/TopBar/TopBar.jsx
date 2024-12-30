@@ -64,7 +64,8 @@ function TopBar() {
                onClick={(e) => handleSmoothScroll(e, 'skills')}>Skills</a>
             <a className={activeSection === '#projects' ? styles.selected : ""}
                onClick={(e) => handleSmoothScroll(e, 'projects')}>Projects</a>
-            <a href="#">Contact</a>
+            <a className={activeSection === '#contact' ? styles.selected : ""}
+               onClick={(e) => handleSmoothScroll(e, 'contact')}>Contact</a>
         </nav>
     )
 }

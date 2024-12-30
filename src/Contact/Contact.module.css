@@ -1,0 +1,125 @@
+.body {
+    background: linear-gradient(to right, #cde4fa, white);
+    padding: 100px 0;
+}
+
+.box {
+    max-width: 1100px;
+    padding: 0 5.5%;
+    margin: auto;
+
+}
+
+.head {
+    font-size: 40px;
+    padding: 0 0 50px 0;
+    margin: 0;
+    text-align: center;
+    text-decoration: 2px dashed underline;
+}
+
+.contain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.left {
+    width: 55%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.desc {
+    font-size: 16px;
+    margin: 0;
+}
+
+.detailCont {
+    display: flex;
+    flex-direction: row;
+    padding: 25px 10px 0;
+}
+
+.icon {
+    color: #1e3551;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    padding-right: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.topDetail, .bottomDetail {
+    margin: 0;
+    font-size: 16px;
+}
+
+.topDetail {
+    font-weight: bold;
+}
+
+.bottomDetail {
+    color: #5e5e5e;
+}
+
+.socials {
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.social {
+    background: inherit;
+    box-sizing: border-box;
+    color: #1e3551;
+    font-size: 50px;
+    transition: all 0.3s ease;
+}
+
+.social:hover {
+    color: #18273c;
+    transform: translateY(-5px);
+}
+
+.right {
+    width: 45%;
+    padding-left: 10%;
+}
+
+
+@media (max-width: 900px) {
+    .contain {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .left {
+        width: fit-content;
+    }
+
+    .right {
+        padding-left: 0;
+        width: fit-content;
+        text-align: left;
+    }
+
+    .socials {
+        margin-left: 0;
+        justify-content: space-evenly;
+    }
+}

@@ -6,6 +6,7 @@ import processData from "./utils/processData.js";
 import data from "./assets/data.json";
 import Skills from "./Skills/Skills.jsx";
 import Projects from "./Projects/Projects.jsx";
+import Contact from "./Contact/Contact.jsx";
 
 function App() {
     let processedData;
@@ -19,6 +20,7 @@ function App() {
             <Services data={processedData}/>
             <Skills data={processedData}/>
             <Projects data={processedData}/>
+            <Contact data={processedData}/>
         </div>
     )
 
