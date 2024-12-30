@@ -24,7 +24,22 @@ function Skills(props) {
                         <p className={styles.inner}>{props.data.developmentSkill}</p>
                     </div>
                     <div className={styles.right}>
-                        {/*    right*/}
+                        {
+                            Object.entries(props.data.skills).map(([category, skills], index) => (
+                                <div key={index} className={styles.category}>
+                                    <p className={styles.title}>{category}</p>
+                                    <div className={styles.bubbles}>
+                                        {
+                                            skills.map((skill, i) => (
+                                                <div key={i} className={styles.bubble}>
+                                                    {skill}
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

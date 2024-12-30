@@ -13,6 +13,7 @@
 
 .shortHead {
     background-color: #1e3551;
+    z-index: 2;
 }
 
 .head a, .shortHead a {
@@ -20,6 +21,7 @@
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .head a {
