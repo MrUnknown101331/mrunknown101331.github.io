@@ -21,6 +21,7 @@ function App() {
             <Skills data={processedData}/>
             <Projects data={processedData}/>
             <Contact data={processedData}/>
+            <footer>© 2025 Faizan Ahmed. All Rights Reserved.</footer>
         </div>
     )
 

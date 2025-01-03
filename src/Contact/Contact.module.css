@@ -100,6 +100,69 @@
     padding-left: 10%;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    gap: 20px;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.lineInput, .subject, .message {
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.message {
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.lineInput:focus, .subject:focus, .message:focus {
+    border-color: #1e3551;
+    box-shadow: 0 0 5px rgba(30, 53, 81, 0.3);
+}
+
+.button {
+    display: inline-block;
+    background: #1e3551;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid #1e3551;
+    transition: all 0.3s ease;
+    width: 160px;
+    height: 45px;
+}
+
+.button:hover {
+    background-color: #18273c;
+    border-color: #18273c;
+    transform: translateY(-5px);
+}
+
+.button:active {
+    background-color: #1e3551;
+    border-color: #1e3551;
+    transform: scale(0.9);
+}
+
 
 @media (max-width: 900px) {
     .contain {
@@ -113,6 +176,7 @@
     }
 
     .right {
+        margin-top: 50px;
         padding-left: 0;
         width: fit-content;
         text-align: left;
@@ -121,5 +185,15 @@
     .socials {
         margin-left: 0;
         justify-content: space-evenly;
+    }
+
+    .line {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lineInput, .subject {
+        padding: 0 10px;
     }
 }

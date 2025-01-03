@@ -6,6 +6,9 @@ import {MdEmail} from "react-icons/md";
 import {LuLanguages} from "react-icons/lu";
 import {TbBrandGithub} from "react-icons/tb";
 import {TbBrandLinkedin} from "react-icons/tb";
+import {useRef} from "react";
+import emailjs from "@emailjs/browser";
+import key from '../utils/keys.json'
 
 function Contact(props) {
     const details = [
@@ -14,6 +17,27 @@ function Contact(props) {
         {icon: <MdEmail className={styles.icon}/>, top: 'Email', bottom: props.data.email},
         {icon: <LuLanguages className={styles.icon}/>, top: 'Languages', bottom: props.data.languages},
     ]
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(key.serviceKey, key.templateKey, form.current, {
+                publicKey: key.publicKey,
+            })
+            .then(
+                () => {
+                    form.current.reset();
+                    alert("Message sent successfully!");
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    alert("Message not sent!");
+                },
+            );
+    };
 
     return (
         <section id="contact" className={styles.body}>
@@ -43,10 +67,17 @@ function Contact(props) {
                     </div>
                     <div className={styles.right}>
                         <p className={styles.title}>Email me</p>
-                        <form>
-                            <div>
-                                <input/>
+                        <form className={styles.form} ref={form} onSubmit={sendEmail}>
+                            <div className={styles.line}>
+                                <input className={styles.lineInput} placeholder="Your Name" type="text"
+                                       name="user_name" required={true}/>
+                                <input className={styles.lineInput} placeholder="Your Email" type="email"
+                                       name="user_email" required={true}/>
                             </div>
+                            <input className={styles.subject} placeholder="Subject" type="text" name="subject"
+                                   required={true}/>
+                            <textarea className={styles.message} placeholder="Message..." name="message" rows="2"/>
+                            <input type="submit" value="Send Message" className={styles.button}/>
                         </form>
                     </div>
                 </div>

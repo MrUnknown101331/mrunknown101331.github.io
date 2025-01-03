@@ -18,3 +18,10 @@ body, html {
     background-attachment: fixed;
     height: 100%;
 }
+
+footer {
+    background: #111;
+    padding: 6px 16px;
+    color: #888c8d;
+    text-align: center;
+}
