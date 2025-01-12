@@ -64,6 +64,7 @@ function Projects(props) {
                     ))}
                 </Swiper>
                 <div className={styles.customDotList}></div>
+                <p className={styles.below}>visit my Github to see all Projects.</p>
             </div>
         </section>
     );
