@@ -60,5 +60,9 @@
 
 .below {
     text-align: center;
+}
+
+.below a {
+    text-decoration: none;
     color: #676767;
 }

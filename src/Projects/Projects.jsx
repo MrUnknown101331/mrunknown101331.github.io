@@ -64,7 +64,12 @@ function Projects(props) {
                     ))}
                 </Swiper>
                 <div className={styles.customDotList}></div>
-                <p className={styles.below}>visit my Github to see all Projects.</p>
+                <p className={styles.below}>
+                    <a href={props.data.github} target="_blank" rel="noopener noreferrer">
+                        Visit my Github to see all Projects.
+                    </a>
+                </p>
+
             </div>
         </section>
     );
